@@ -1,5 +1,5 @@
 <template>
-  <p>si</p>
+  <<p>si</p>>
 </template>
 
 <script setup>

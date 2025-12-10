@@ -1,14 +1,16 @@
 <template>
   <SearchBar @search="searchPkm" />
   <div>
-    <ItemCard :item="pkm" />
+    <ItemCard v-if="pkm" :item="pkm" />
+    <FavButton :item="pkm" />
   </div>
 </template>
 
 <script setup>
 import { ref } from "vue";
+import ItemCard from "../../shared/components/ItemCard.vue";
 import SearchBar from "./components/SearchBar.vue";
-import ItemCard from "./components/ItemCard.vue";
+import FavButton from "./components/FavButton.vue";
 
 const pkm = ref(null);
 
