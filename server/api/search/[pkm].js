@@ -12,5 +12,4 @@ export default defineEventHandler(async (event) => {
       statusMessage: "El pokemon no existeix",
     });
   }
-  
 });
