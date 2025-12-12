@@ -1,4 +1,4 @@
-import { get } from "~~/server/composables/useApi";
+import {get} from '../../composables/useApi'
 
 export default defineEventHandler(async (event) => {
   //S'agafa la variable de params
