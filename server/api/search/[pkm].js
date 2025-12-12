@@ -1,12 +1,12 @@
-import {get} from '../../composables/useApi'
+import { getPokemon } from "~~/server/composables/useSearch";
 
 export default defineEventHandler(async (event) => {
-  //S'agafa la variable de params
   const name = getRouterParam(event, "pkm");
-
+  
   try {
-    return await get(`/pokemon/${name}`).then((res) => (res = res.data));
-  } catch {
+    const res = await getPokemon(name);
+    return res.data;
+  } catch (error) {
     throw createError({
       statusCode: 404,
       statusMessage: "El pokemon no existeix",

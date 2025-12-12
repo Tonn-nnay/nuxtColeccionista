@@ -12,7 +12,7 @@ const getApi = () => {
 };
 
 export const useApi = () => {
-  const get = (url, config = {}) => getApi.get(url, config);
-  const put = (url, body) => getApi.put(url, body);
+  const get = (url, config = {}) => getApi().get(url, config);
+  const put = (url, body) => getApi().put(url, body);
   return { get, put };
 };
