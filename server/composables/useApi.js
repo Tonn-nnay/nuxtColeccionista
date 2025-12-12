@@ -1,5 +1,6 @@
 import axios from "axios";
-export const getApi = () => {
+
+const getApi = () => {
   const config = useRuntimeConfig();
 
   return axios.create({
@@ -10,3 +11,8 @@ export const getApi = () => {
   });
 };
 
+export const useApi = () => {
+  const get = (url, config = {}) => apiClient.get(url, config);
+  const put = (url, body) => apiClient.put(url,body)
+  return { get, put };
+};

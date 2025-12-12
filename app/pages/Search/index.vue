@@ -1,4 +1,5 @@
 <template>
+  <h1>Search Page</h1>
   <SearchBar @search="searchPkm" />
   <div>
     <ItemCard v-if="pkm" :item="pkm" />
